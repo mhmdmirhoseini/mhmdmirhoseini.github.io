@@ -22,6 +22,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         header a img {
             height: 30px; /* Increased logo height */
@@ -31,6 +32,7 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             display: block;
@@ -95,6 +97,7 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             max-width: 100%;
             box-sizing: border-box;
+            flex-wrap: wrap;
         }
         .profile-box {
             width: 150px;
@@ -139,6 +142,7 @@
             position: relative;
             width: 100%;
             box-sizing: border-box;
+            flex-wrap: wrap;
         }
         footer .footer-left {
             text-align: left;
@@ -152,6 +156,59 @@
         }
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                padding: 10px;
+                text-align: left;
+                border-top: 1px solid #444;
+            }
+            nav a:hover {
+                background-color: #333;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .profile-box {
+                width: 120px;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-left,
+            footer .footer-right {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                padding: 8px;
+            }
+            .profile-box {
+                width: 100px;
+            }
+            .hero-slider-dots {
+                margin-top: 5px;
+            }
+            .hero-slider-dot {
+                width: 8px;
+                height: 8px;
+            }
         }
     </style>
 </head>
