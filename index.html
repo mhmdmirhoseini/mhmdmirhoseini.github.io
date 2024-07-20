@@ -57,13 +57,22 @@
             border-bottom: 2px solid #004d80;
             padding-bottom: 5px;
         }
-        .column-container {
+        .about-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-        .column {
+        .about-container .image-container {
             flex: 1;
+            min-width: 280px;
+        }
+        .about-container .image-container img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .about-container .text-container {
+            flex: 2;
             min-width: 280px;
         }
         p {
@@ -104,12 +113,22 @@
     <div class="container">
         <div class="content">
             <h2>About Me</h2>
-            <p>
-                I am S. Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
-            </p>
-            <p>
-                With a solid foundation in statistics and advanced skills in data analysis, I enjoy uncovering patterns and trends that can help make better decisions. My academic background and practical experience have equipped me with a diverse skill set, ranging from statistical modeling to machine learning and big data technologies.
-            </p>
+            <div class="about-container">
+                <div class="image-container">
+                    <img src="path_to_your_image.jpg" alt="S. Mohammad Mirhoseini">
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am S. Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
+                    </p>
+                    <p>
+                        With a solid foundation in statistics and advanced skills in data analysis, I enjoy uncovering patterns and trends that can help make better decisions. My academic background and practical experience have equipped me with a diverse skill set, ranging from statistical modeling to machine learning and big data technologies.
+                    </p>
+                    <p>
+                        [Add more about your background, skills, and experiences here...]
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="column-container">
             <div class="column content interests">
