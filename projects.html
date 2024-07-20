@@ -9,101 +9,136 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         header {
-            background-color: #004d80;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #333; /* Dark gray header */
+            color: #fff; /* White text */
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        header img {
+            height: 40px;
         }
         nav {
-            background-color: #003366;
+            background-color: #222; /* Darker gray navigation */
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
         nav a {
-            float: left;
             display: block;
-            color: #f2f2f2;
+            color: #ccc; /* Light gray text */
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #444; /* Slightly lighter gray for hover */
+            color: #fff; /* White text on hover */
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .content {
-            background-color: #fff;
+            background-color: #fff; /* White content background */
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
         .content h2 {
-            color: #004d80;
-            border-bottom: 2px solid #004d80;
+            color: #007bff; /* Blue heading */
+            border-bottom: 2px solid #007bff;
             padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 8px;
+            background-color: #f9f9f9; /* Slightly gray background for list items */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         p {
             line-height: 1.8;
             margin: 15px 0;
         }
         footer {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #004d80;
-            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #333; /* Dark gray footer */
+            color: #fff; /* White text */
             position: relative;
             width: 100%;
-            bottom: 0;
+            box-sizing: border-box;
         }
-        a {
-            color: #004d80;
+        footer .footer-left {
+            text-align: left;
+        }
+        footer .footer-right {
+            text-align: right;
+        }
+        footer a {
+            color: #007bff; /* Blue links */
             text-decoration: none;
         }
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Projects</h1>
+        <img src="logo" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="me_off_work.html">Me Off Work</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
     <div class="container">
         <div class="content">
             <h2>My Projects</h2>
-            <p>
-                Here are some of the projects I have worked on:
-            </p>
+            <p>Here are some of the projects I have worked on:</p>
             <ul>
                 <li><strong>Project 1:</strong> Description of Project 1.</li>
                 <li><strong>Project 2:</strong> Description of Project 2.</li>
                 <li><strong>Project 3:</strong> Description of Project 3.</li>
+                <!-- Add more projects here -->
             </ul>
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 S. Mohammad Mirhoseini. All rights reserved.</p>
+        <div class="footer-left">
+            <p>Tehran, Iran</p>
+            <p>
+                <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
+                <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <p>Email: <a href="mailto:mirhoseini188@gmail.com">mirhoseini188@gmail.com</a></p>
+        </div>
     </footer>
 </body>
 </html>
