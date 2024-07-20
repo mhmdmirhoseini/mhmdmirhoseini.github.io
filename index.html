@@ -12,26 +12,24 @@
             background-color: #f7f9fc;
             color: #333;
         }
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
         header {
-            background-color: #004d80;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
+            background-color: #fff;
+            color: #333;
+            padding: 10px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        header img {
+            height: 40px; /* Adjust size of logo as needed */
         }
         nav {
             background-color: #003366;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
         nav a {
             float: left;
@@ -73,13 +71,21 @@
             margin: 15px 0;
         }
         footer {
-            text-align: center;
-            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
             background-color: #004d80;
             color: #fff;
             position: relative;
             width: 100%;
             bottom: 0;
+        }
+        footer .footer-left {
+            text-align: left;
+        }
+        footer .footer-right {
+            text-align: right;
         }
         footer a {
             color: #fff;
@@ -139,16 +145,16 @@
 </head>
 <body>
     <header>
-        <h1>S. Mohammad Mirhoseini</h1>
+        <img src="path/to/your/logo.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="me_off_work.html">Me Off Work</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="me_off_work.html">Me Off Work</a>
-        <a href="about.html">About</a>
-    </nav>
     <div class="container">
         <div class="hero-slider">
             <img src="path/to/your/image1.jpg" alt="Photo 1" class="active">
@@ -162,7 +168,7 @@
         </div>
         <div class="content">
             <div class="profile-box">
-                <img src="path/to/your/profile.jpg" alt="Profile Picture">
+                <img src="https://raw.githubusercontent.com/mhmdmirhoseini/mhmdmirhoseini.github.io/main/3.4%20(1)%20-%20Copy.jpg" alt="Profile Picture">
                 <p>S. Mohammad Mirhoseini</p>
             </div>
             <div class="text-content">
@@ -177,14 +183,16 @@
         </div>
     </div>
     <footer>
-        <p>S. Mohammad Mirhoseini</p>
-        <p>Email: <a href="mailto:mirhoseini188@gmail.com">mirhoseini188@gmail.com</a></p>
-        <p>Location: Tehran, Iran</p>
-        <p>
-            <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
-            <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
-        </p>
-        <p>&copy; 2024 S. Mohammad Mirhoseini. All rights reserved.</p>
+        <div class="footer-left">
+            <p>Location: Tehran, Iran</p>
+            <p>
+                <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
+                <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <p>Email: <a href="mailto:mirhoseini188@gmail.com">mirhoseini188@gmail.com</a></p>
+        </div>
     </footer>
     <script>
         const slides = document.querySelectorAll('.hero-slider img');
