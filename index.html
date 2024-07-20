@@ -11,16 +11,17 @@
             padding: 0;
             background-color: #f7f9fc;
             color: #333;
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
             background-color: #fff;
             color: #333;
-            padding: 10px 0;
+            padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px;
         }
         header img {
             height: 40px; /* Adjust size of logo as needed */
@@ -32,7 +33,6 @@
             justify-content: center;
         }
         nav a {
-            float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
@@ -42,6 +42,12 @@
         nav a:hover {
             background-color: #ddd;
             color: black;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Ensure container does not exceed viewport width */
+            margin: 0 auto;
+            padding: 20px;
         }
         .content {
             background-color: #fff;
@@ -79,7 +85,7 @@
             color: #fff;
             position: relative;
             width: 100%;
-            bottom: 0;
+            box-sizing: border-box;
         }
         footer .footer-left {
             text-align: left;
@@ -169,7 +175,7 @@
         <div class="content">
             <div class="profile-box">
                 <img src="https://raw.githubusercontent.com/mhmdmirhoseini/mhmdmirhoseini.github.io/main/3.4%20(1)%20-%20Copy.jpg" alt="Profile Picture">
-                <p>S. Mohammad Mirhoseini</p>
+                <p>hello. Im mohammad</p>
             </div>
             <div class="text-content">
                 <h2>About Me</h2>
@@ -184,7 +190,7 @@
     </div>
     <footer>
         <div class="footer-left">
-            <p>Location: Tehran, Iran</p>
+            <p>Tehran, Iran</p>
             <p>
                 <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
                 <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
