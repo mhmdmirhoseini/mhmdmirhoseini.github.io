@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S. Mohammad Mirhoseini - Data Scientist</title>
+    <title>Mohammad Mirhoseini - Data Scientist</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,8 +11,8 @@
             padding: 0;
             background-color: #f7f9fc;
             color: #333;
-            box-sizing: border-box; /* Ensure padding and border are included in the width */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         header {
             background-color: #fff;
@@ -24,7 +24,7 @@
             justify-content: space-between;
         }
         header img {
-            height: 40px; /* Adjust size of logo as needed */
+            height: 40px;
         }
         nav {
             background-color: #003366;
@@ -45,9 +45,43 @@
         }
         .container {
             width: 100%;
-            max-width: 1200px; /* Ensure container does not exceed viewport width */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+        }
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .hero-slider img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .hero-slider img.active {
+            opacity: 1;
+        }
+        .hero-slider-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hero-slider-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .hero-slider-dot.active {
+            background-color: #004d80;
         }
         .content {
             background-color: #fff;
@@ -55,8 +89,9 @@
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 20px;
+            max-width: 100%;
+            box-sizing: border-box;
+            flex: 1;
         }
         .content h2 {
             color: #004d80;
@@ -100,40 +135,6 @@
         footer a:hover {
             text-decoration: underline;
         }
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        .hero-slider img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 2s ease-in-out; /* Slower transition */
-        }
-        .hero-slider img.active {
-            opacity: 1;
-        }
-        .hero-slider-dots {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .hero-slider-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background-color: #fff;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .hero-slider-dot.active {
-            background-color: #004d80;
-        }
         .profile-box {
             width: 150px;
             padding: 10px;
@@ -175,12 +176,12 @@
         <div class="content">
             <div class="profile-box">
                 <img src="https://raw.githubusercontent.com/mhmdmirhoseini/mhmdmirhoseini.github.io/main/3.4%20(1)%20-%20Copy.jpg" alt="Profile Picture">
-                <p>hello. Im mohammad</p>
+                <p>hello I'm mohammad</p>
             </div>
             <div class="text-content">
                 <h2>About Me</h2>
                 <p>
-                    I am S. Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
+                    I am Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
                 </p>
                 <p>
                     With a solid foundation in statistics and advanced skills in data analysis, I enjoy uncovering patterns and trends that can help make better decisions. My academic background and practical experience have equipped me with a diverse skill set, ranging from statistical modeling to machine learning and big data technologies.
