@@ -79,16 +79,45 @@
             width: 100%;
             bottom: 0;
         }
-        a {
-            color: #004d80;
+        footer a {
+            color: #fff;
             text-decoration: none;
         }
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
-        .hero-image {
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .hero-slider img {
             width: 100%;
             height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slider img.active {
+            opacity: 1;
+        }
+        .hero-slider-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hero-slider-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .hero-slider-dot.active {
+            background-color: #004d80;
         }
     </style>
 </head>
@@ -103,7 +132,16 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <img src="path/to/your/image.jpg" alt="A big photo" class="hero-image">
+        <div class="hero-slider">
+            <img src="path/to/your/image1.jpg" alt="Photo 1" class="active">
+            <img src="path/to/your/image2.jpg" alt="Photo 2">
+            <img src="path/to/your/image3.jpg" alt="Photo 3">
+            <div class="hero-slider-dots">
+                <span class="hero-slider-dot active"></span>
+                <span class="hero-slider-dot"></span>
+                <span class="hero-slider-dot"></span>
+            </div>
+        </div>
         <div class="content">
             <h2>About Me</h2>
             <p>
@@ -120,9 +158,39 @@
         <p>Location: Tehran, Iran</p>
         <p>
             <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
-            <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
+            <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a> |
+            <a href="me_off_work.html">Me Off Work</a> |
+            <a href="about.html">About</a>
         </p>
         <p>&copy; 2024 S. Mohammad Mirhoseini. All rights reserved.</p>
     </footer>
+    <script>
+        const slides = document.querySelectorAll('.hero-slider img');
+        const dots = document.querySelectorAll('.hero-slider-dot');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+        });
+
+        setInterval(nextSlide, 3000);
+    </script>
 </body>
 </html>
