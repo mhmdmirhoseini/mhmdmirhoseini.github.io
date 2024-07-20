@@ -51,6 +51,8 @@
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
         }
         .content h2 {
             color: #004d80;
@@ -90,6 +92,7 @@
             position: relative;
             width: 100%;
             overflow: hidden;
+            margin-bottom: 20px;
         }
         .hero-slider img {
             width: 100%;
@@ -98,7 +101,7 @@
             top: 0;
             left: 0;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 2s ease-in-out; /* Slower transition */
         }
         .hero-slider img.active {
             opacity: 1;
@@ -119,6 +122,19 @@
         .hero-slider-dot.active {
             background-color: #004d80;
         }
+        .profile-box {
+            width: 150px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +146,8 @@
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
+        <a href="me_off_work.html">Me Off Work</a>
+        <a href="about.html">About</a>
     </nav>
     <div class="container">
         <div class="hero-slider">
@@ -143,13 +161,19 @@
             </div>
         </div>
         <div class="content">
-            <h2>About Me</h2>
-            <p>
-                I am S. Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
-            </p>
-            <p>
-                With a solid foundation in statistics and advanced skills in data analysis, I enjoy uncovering patterns and trends that can help make better decisions. My academic background and practical experience have equipped me with a diverse skill set, ranging from statistical modeling to machine learning and big data technologies.
-            </p>
+            <div class="profile-box">
+                <img src="path/to/your/profile.jpg" alt="Profile Picture">
+                <p>S. Mohammad Mirhoseini</p>
+            </div>
+            <div class="text-content">
+                <h2>About Me</h2>
+                <p>
+                    I am S. Mohammad Mirhoseini, a passionate data scientist with a Bachelor's degree in Statistics from Allameh Tabataba'i University and a Master's degree in Data Science from Tarbiat Modares University. My journey in the field of data science has been driven by a deep love for data and the power it holds to transform raw information into meaningful insights.
+                </p>
+                <p>
+                    With a solid foundation in statistics and advanced skills in data analysis, I enjoy uncovering patterns and trends that can help make better decisions. My academic background and practical experience have equipped me with a diverse skill set, ranging from statistical modeling to machine learning and big data technologies.
+                </p>
+            </div>
         </div>
     </div>
     <footer>
@@ -158,9 +182,7 @@
         <p>Location: Tehran, Iran</p>
         <p>
             <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a> |
-            <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a> |
-            <a href="me_off_work.html">Me Off Work</a> |
-            <a href="about.html">About</a>
+            <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
         </p>
         <p>&copy; 2024 S. Mohammad Mirhoseini. All rights reserved.</p>
     </footer>
@@ -190,7 +212,7 @@
             });
         });
 
-        setInterval(nextSlide, 3000);
+        setInterval(nextSlide, 5000); // Slower interval
     </script>
 </body>
 </html>
