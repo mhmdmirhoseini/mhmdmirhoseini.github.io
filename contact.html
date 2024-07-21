@@ -22,15 +22,17 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
-        header img {
-            height: 40px;
+        header a img {
+            height: 20px; /* Adjust logo height */
         }
         nav {
             background-color: #222; /* Darker gray navigation */
             overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             display: block;
@@ -81,6 +83,7 @@
             position: relative;
             width: 100%;
             box-sizing: border-box;
+            flex-wrap: wrap;
         }
         footer .footer-left {
             text-align: left;
@@ -106,11 +109,66 @@
         .social-links a:hover {
             text-decoration: underline;
         }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                padding: 10px;
+                text-align: left;
+                border-top: 1px solid #444;
+            }
+            nav a:hover {
+                background-color: #333;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .profile-box {
+                width: 120px;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            footer .footer-left,
+            footer .footer-right {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                padding: 8px;
+            }
+            .profile-box {
+                width: 100px;
+            }
+            .hero-slider-dots {
+                margin-top: 5px;
+            }
+            .hero-slider-dot {
+                width: 8px;
+                height: 8px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo"> <!-- Corrected logo link -->
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/mhmdmirhoseini/mhmdmirhoseini.github.io/main/Untitled-1.png" alt="Logo">
+        </a>
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -131,7 +189,7 @@
             <h2>Find Me Here</h2>
             <!-- Embed Google Map -->
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9801235529944!2d-122.08424968469225!3d37.4219997798255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5e6a1d82e8f%3A0x5e8c8b69d2b8a722!2sGoogleplex!5e0!3m2!1sen!2sus!4v1679519943281!5m2!1sen!2sus" width="640" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323723.7961687043!2d51.16506217863862!3d35.68919753251624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e06d555555555%3A0x5555555555555555!2sTehran%2C%20Iran!5e0!3m2!1sen!2sus!4v1679519943281!5m2!1sen!2sus" width="640" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
     </div>
