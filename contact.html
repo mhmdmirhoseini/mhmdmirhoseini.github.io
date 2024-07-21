@@ -72,28 +72,39 @@
         .form-map-container {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
             flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
         }
-        .form-container, .map-container, .cv-links-container {
-            width: 48%; /* Adjusted width */
-        }
-        .form-container iframe, .map-container iframe {
-            width: 100%;
-            border: none;
+        .form-container {
+            flex: 1;
+            max-width: 640px; /* Adjusted width */
         }
         .form-container iframe {
-            height: 400px; /* Adjusted height */
-        }
-        .map-container iframe {
-            height: 300px; /* Adjusted height */
+            width: 100%;
+            height: 780px; /* Adjusted height */
+            border: none;
         }
         .cv-links-container {
-            margin-top: 20px;
+            flex: 1;
+            max-width: 300px; /* Adjusted width */
+            margin-left: 20px;
+            text-align: left;
+        }
+        .cv-links-container h3 {
+            margin-top: 0;
         }
         .cv-links-container a {
             display: block;
             margin-bottom: 10px;
+        }
+        .map-container {
+            margin-top: 20px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px; /* Adjusted height */
+            border: none;
         }
         footer {
             display: flex;
@@ -140,23 +151,19 @@
             <div class="form-map-container">
                 <div class="form-container">
                     <!-- Embed Google Form -->
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczQkb9EThKuv8yWTFENTARiTqpJUM0Rfxj34MK1JgY3ZJabA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqQtJGkKF0BqaDF8BqyicSviQ47KrzMX8198F4AeFXisG4bQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
-                <div class="map-container">
-                    <!-- Embed Google Map -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9801235529944!2d51.42107287286255!3d35.68919793848099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e013f2f9b7b8f%3A0x7b77a1c0c3b4a50!2sTehran!5e0!3m2!1sen!2sus!4v1679519943281!5m2!1sen!2sus" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-            </div>
-            <div class="cv-links-container">
-                <div>
+                <div class="cv-links-container">
                     <h3>CV</h3>
                     <a href="path/to/your-cv.pdf" download>Download PDF</a>
-                </div>
-                <div>
                     <h3>Links</h3>
                     <a href="https://www.linkedin.com/in/mhmd-mirhoseini">LinkedIn</a>
                     <a href="https://www.instagram.com/mhmd_mirhoseini">Instagram</a>
                 </div>
+            </div>
+            <div class="map-container">
+                <!-- Embed Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9801235529944!2d51.42107287286255!3d35.68919793848099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e013f2f9b7b8f%3A0x7b77a1c0c3b4a50!2sTehran!5e0!3m2!1sen!2sus!4v1679519943281!5m2!1sen!2sus" width="640" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
     </div>
