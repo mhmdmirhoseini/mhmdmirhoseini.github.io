@@ -46,18 +46,26 @@
             color: #fff; /* White text on hover */
         }
         .container {
+            display: flex;
+            flex-direction: row;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
         }
-        .content {
+        .main-content {
+            flex: 3;
             background-color: #fff; /* White content background */
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            margin: 20px;
         }
         .content h2 {
             color: #007bff; /* Blue heading */
@@ -79,6 +87,68 @@
         .blog-post p {
             line-height: 1.8;
             margin: 10px 0; /* Space between paragraphs */
+        }
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .tags a {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .tags a:hover {
+            background-color: #0056b3;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .pagination a {
+            color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .sidebar h2 {
+            color: #007bff;
+        }
+        .sidebar .recent-posts,
+        .sidebar .popular-posts {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar .recent-posts a,
+        .sidebar .popular-posts a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .sidebar .recent-posts a:hover,
+        .sidebar .popular-posts a:hover {
+            color: #007bff;
         }
         footer {
             display: flex;
@@ -124,13 +194,8 @@
             nav a:hover {
                 background-color: #333;
             }
-            .content {
+            .container {
                 flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            .profile-box {
-                width: 120px;
             }
             footer {
                 flex-direction: column;
@@ -146,16 +211,6 @@
         @media (max-width: 480px) {
             nav a {
                 padding: 8px;
-            }
-            .profile-box {
-                width: 100px;
-            }
-            .hero-slider-dots {
-                margin-top: 5px;
-            }
-            .hero-slider-dot {
-                width: 8px;
-                height: 8px;
             }
         }
     </style>
@@ -175,8 +230,17 @@
         </nav>
     </header>
     <div class="container">
-        <div class="content">
+        <div class="main-content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search blog posts...">
+            </div>
             <h2>Latest Blog Posts</h2>
+            <div class="tags">
+                <a href="#">#Technology</a>
+                <a href="#">#Programming</a>
+                <a href="#">#WebDevelopment</a>
+                <!-- Add more tags here -->
+            </div>
             <div class="blog-post">
                 <h3>Post Title 1</h3>
                 <p>Date: January 1, 2024</p>
@@ -188,6 +252,27 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor, lectus nec cursus porta, libero odio interdum felis, et commodo libero libero eu eros. Nunc sit amet pharetra leo.</p>
             </div>
             <!-- Add more blog posts here -->
+            <div class="pagination">
+                <a href="#">&laquo; Previous</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">Next &raquo;</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="recent-posts">
+                <h2>Recent Posts</h2>
+                <a href="#">Recent Post 1</a>
+                <a href="#">Recent Post 2</a>
+                <a href="#">Recent Post 3</a>
+            </div>
+            <div class="popular-posts">
+                <h2>Popular Posts</h2>
+                <a href="#">Popular Post 1</a>
+                <a href="#">Popular Post 2</a>
+                <a href="#">Popular Post 3</a>
+            </div>
         </div>
     </div>
     <footer>
